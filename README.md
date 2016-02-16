@@ -25,3 +25,9 @@ yo guick
 Use the generated `guick.json` to bootstrap your [Guick](https://github.com/wdavilaneto/guick) Project.
 
 And be happy! o/
+
+## TODO
+
+1. stop using .yo-rc.json and write guick.json
+2. template
+3. download [Guick](https://github.com/wdavilaneto/guick) and start the project with generated guick.json
