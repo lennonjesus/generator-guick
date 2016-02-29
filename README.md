@@ -31,6 +31,7 @@ And be happy! o/
 1. [x] ~~stop using .yo-rc.json and write guick.json~~
 2. [x] ~~template~~
 3. [ ] download [Guick](https://github.com/wdavilaneto/guick) and start the project with generated guick.json
+4. [ ] generate tablePrefix and tables info
 
 ## License
 
