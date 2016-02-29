@@ -1,3 +1,7 @@
+/**
+* @author Lennon Jesus <lennon.jesus@gmail.com
+* @license MIT
+*/
 var generators = require('yeoman-generator');
 var yosay = require('yosay');
 var chalk = require('chalk');
@@ -122,45 +126,38 @@ module.exports = generators.Base.extend({
     this.prompt(prompts, function (props) {
       this.props = props;
 
-      this.config.set('group', this.props.group);
-      this.config.set('name', this.props.name);
+      this.fs.copyTpl(
+        this.templatePath('guick.json.tpl'),
+        this.destinationPath('guick.json'),
 
-      this.config.set('guickConnectionInfo', {
-        password: this.props.guickConnectionInfoPassword,
-        user: this.props.guickConnectionInfoUser,
-        dialect: this.props.guickConnectionInfoDialect,
-        driverName: this.props.guickConnectionInfoDriverName,
-        url: this.props.guickConnectionInfoUrl
-      });
+        {
+          group: props.group,
+          name: props.name,
+          description : props.description,
+          guickConnectionInfoPassword: props.guickConnectionInfoPassword,
+          guickConnectionInfoUser: props.guickConnectionInfoUser,
+          guickConnectionInfoDialect: props.guickConnectionInfoDialect,
+          guickConnectionInfoDriverName: props.guickConnectionInfoDriverName,
+          guickConnectionInfoUrl: props.guickConnectionInfoUrl,
+          generatedDatasourceInfoPassword: props.generatedDatasourceInfoPassword,
+          generatedDatasourceInfoUser: props.generatedDatasourceInfoUser,
+          generatedDatasourceInfoDialect: props.generatedDatasourceInfoDialect,
+          generatedDatasourceInfoDriverName: props.generatedDatasourceInfoDriverName,
+          generatedDatasourceInfoUrl: props.generatedDatasourceInfoUrl,
+          generationLanguage: props.generationLanguage,
+          tablePrefix: [
 
-      this.config.set('generatedDatasourceInfo', {
-        password: this.props.generatedDatasourceInfoPassword,
-        user: this.props.generatedDatasourceInfoUser,
-        dialect: this.props.generatedDatasourceInfoDialect,
-        driverName: this.props.generatedDatasourceInfoDriverName,
-        url: this.props.generatedDatasourceInfoUrl
-      });
+          ],
+          useWorkflow: props.useWorkflow,
+          tables: [
 
-      this.config.set('generationLanguage', this.props.generationLanguage);
-      this.config.set('tablePrefix', this.props.tablePrefix);
-      this.config.set('useWorkflow', this.props.useWorkflow);
+          ]
+        }
 
-      this.config.set('tables',
-        [
-          {
-            owner: "schema",
-            tableName: "example_table"
-          }
-        ]
       );
-
-      this.config.set('description', this.props.description);
 
       done();
     }.bind(this));
   }
 
 });
-
-
-//TODO http://yeoman.io/authoring/file-system.html

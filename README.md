@@ -2,7 +2,7 @@
 
 A Yeoman generator to create [guick](https://github.com/wdavilaneto/guick).json
 
-## usage
+## Usage
 
 Install `Yeoman` and `Guick Generator`:
 
@@ -28,6 +28,14 @@ And be happy! o/
 
 ## TODO
 
-1. stop using .yo-rc.json and write guick.json
-2. template
-3. download [Guick](https://github.com/wdavilaneto/guick) and start the project with generated guick.json
+1. [x] ~~stop using .yo-rc.json and write guick.json~~
+2. [x] ~~template~~
+3. [ ] download [Guick](https://github.com/wdavilaneto/guick) and start the project with generated guick.json
+
+## License
+
+MIT
+
+## Author
+
+[Lennon Jesus](https://github.com/lennonjesus)
