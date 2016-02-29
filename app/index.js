@@ -2,6 +2,9 @@
 * @author Lennon Jesus <lennon.jesus@gmail.com
 * @license MIT
 */
+
+'use strict';
+
 var generators = require('yeoman-generator');
 var yosay = require('yosay');
 var chalk = require('chalk');
