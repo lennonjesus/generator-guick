@@ -40,3 +40,15 @@ MIT
 ## Author
 
 [Lennon Jesus](https://github.com/lennonjesus)
+
+
+
+OK guick:init - cria o guick.json dentro de uma pasta
+OK guick:source - baixa os sources
+
+
+guick:create - cria a pasta do projeto e o guick.json
+
+guick:gen - gera o projeto a partir do guick.json
+
+guick:prepare - constrói o projeto gerado (usando java/gradle, npm install e bower install)

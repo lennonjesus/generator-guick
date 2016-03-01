@@ -3,6 +3,7 @@
 var generators = require('yeoman-generator');
 var yosay = require('yosay');
 var chalk = require('chalk');
+var mkdirp = require('mkdirp');
 
 var repo = 'guick';
 var guickSources = 'guick-source';
@@ -19,18 +20,23 @@ module.exports = generators.Base.extend({
       yosay('Welcome to \n' + chalk.green('Guick Generator') + '!')
     );
 
-    this.log('This task will download all guick sources to ' + chalk.blue(guickSources) + ' directory.');
+    this.log('This task will create a new guick project and initialize your ' + chalk.blue('guick.json') + ' config file.')
 
     this.prompt([
       {
         type: 'confirm',
         message: 'Do you wish to continue?' ,
         name: 'continue'
-
+      },
+      {
+        type: 'string',
+        message: 'What is your project name?' ,
+        name: 'projectName'
       }
     ], function (answers) {
 
       this.continue = answers.continue;
+      this.projectName = answers.projectName;
 
       done();
 
@@ -48,11 +54,20 @@ module.exports = generators.Base.extend({
       return;
     }
 
-    this.remote('lennonjesus', repo, (err, remote) => {
-      remote.bulkDirectory('.', guickSources);
+    mkdirp(this.projectName, function (err) {
+      if (err) {
+        console.error(err);
+      } else {
+        console.log('Project folder successfully created.');
 
-      done();
+      }
     });
+
+  },
+
+  end: function () {
+
+    this.composeWith('guick:init');
 
   }
 
