@@ -131,7 +131,7 @@ module.exports = generators.Base.extend({
 
       this.fs.copyTpl(
         this.templatePath('guick.json.tpl'),
-        this.destinationPath('guick.json'),
+        this.destinationPath(props.name + '/guick.json'),
 
         {
           group: props.group,
