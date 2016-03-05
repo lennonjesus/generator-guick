@@ -1,6 +1,6 @@
 ## GUICK Yeoman Generator
 
-A Yeoman generator to create [guick](https://github.com/wdavilaneto/guick).json
+A Yeoman generator to create [Guick](https://github.com/wdavilaneto/guick) Projects.
 
 ## Usage
 
