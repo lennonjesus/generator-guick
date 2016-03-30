@@ -1,11 +1,12 @@
 {
   "name": "generator-guick",
-  "version": "v0.0.4",
+  "version": "v0.0.5",
   "description": "guick.json yeoman generator",
   "author": "Lennon Jesus <lennon.jesus@gmail.com>",
   "files": [
     "app",
-    "router"
+    "init",
+    "source"
   ],
   "keywords": [
     "yeoman-generator",
