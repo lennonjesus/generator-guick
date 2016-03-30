@@ -1,6 +1,6 @@
 ## GUICK Yeoman Generator
 
-A Yeoman generator to create [guick](https://github.com/wdavilaneto/guick).json
+A Yeoman generator to create [Guick](https://github.com/wdavilaneto/guick) Projects.
 
 ## Usage
 
@@ -10,7 +10,7 @@ Install `Yeoman` and `Guick Generator`:
 npm install -g yo generator-guick
 ```
 
-init your project with `guick generator` and answer the questions.
+Initialize your project with `guick generator` and answer the questions.
 
 ```
 yo guick
