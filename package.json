@@ -1,6 +1,6 @@
 {
   "name": "generator-guick",
-  "version": "v0.0.3",
+  "version": "v0.0.4",
   "description": "guick.json yeoman generator",
   "author": "Lennon Jesus <lennon.jesus@gmail.com>",
   "files": [
