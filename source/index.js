@@ -42,7 +42,7 @@ module.exports = generators.Base.extend({
 
     if (!this.continue) {
 
-      this.log("Ok. See you, space cowbow.");
+      this.log("Ok. See you, space cowboy.");
 
       done();
       return;
